@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animación muertos</title>
+</head>
+<body>
+    <svg viewBox= "0 0 900 700" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1">
+        <image xlink:href="images/ofrenda.svg" id="svg_1" height="500" width= "550" y="0" x ="0"></image>
+    
+    <!-- curvas -->
+    <path id="curva_0" d="m-133,170.5c1,0 112,-69 164,-36c52,33 86,97 111,109c25,12 78,-40 124,-65c46,-25 128,64 169,68c41,4 170,-103 118,-100c-52,3 -156,5 -199,40c-43,35 -61,71 -103,64c-42,-7 -110,-65 -132,-72c-22,-7 -70,33 -136,41c-66,8 -117,-49 -116,-49z" opacity="NaN" stroke="none" fill="none"/>
+    
+    <!-- Animación e imagen de Candelabro -->
+        <image xlink:href="images/candelabro.svg" width= "100" heigh="120" opacity="0.9">
+        <animateMotion dur= "40s" repeatCount="indefinite">
+                <mpath xlink:href="#curva_0"></mpath>
+        </animateMotion> 
+            </image>
+    
+        </svg>
+    
