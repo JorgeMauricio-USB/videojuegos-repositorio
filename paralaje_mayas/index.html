@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imágenes con paralaje</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/jparallax.css">
+   <!-- Pantala donde se verá la animación  -->
+   <style>
+        .parallax-viewport{
+            width: 800px;
+            max-width: 60em;
+            height: 300px;
+            background-color: #aebcc9;
+        }
+    </style>
+       <!-- Pantala donde se verá la animación  -->
+</head>
+<body>
+    <div style= "width:800px; margin: auto;">       <!-- Para centrar el rectangulo  -->
+    <h1>Cultura maya</h1>
+<!-- inicia ventana de paralaje  -->
+    <div class="parallax-viewport" id="parallax">
+<!-- Capas de paralaje del fondoo hacia el frente -->
+        <div class="parallax-layer" alt="fondo" style=" width: 2256px; height: 461px;">
+            <img src="imagen/cielo.jpg" style="position: absolute; left: 0px; top: 0px;">
+        </div>
+        <div class="parallax-layer" alt="capa media" style="width: 1274px; height: 296px;">
+            <img src="imagen/chichen.png">
+        </div>
+        <div class="parallax-layer" alt="capa frontal" style="width: 1920px; height: 257px;">
+            <img src="imagen/pasto_final.png" style="position: absolute; top: 43px; left: -350px;">
+        </div>
+    </div>
+    </div>
+<!-- Contenido -->
+<div class="contenedor">
+    <p>La cultura maya fue una civilización mesoamericana que se desarrolló principalmente en México (en los estados de Yucatán, Campeche, Quintana Roo, Chiapas y Tabasco), en Guatemala, Belice y la parte occidental de Honduras y El Salvador, abarcando más de 300 000 km².1​ Destacó a lo largo de más de dos milenios en numerosos aspectos socioculturales como su escritura, uno de los pocos sistemas de escritura plenamente desarrollados del continente americano precolombino, su arte, la arquitectura, su mitología y sus notables sistemas de numeración, así como en astronomía y matemáticas.</p>
+    <p>Durante el periodo formativo, antes de 2000 a. C., se inició el desarrollo de la agricultura y la población se hizo sedentaria estableciéndose en las primeras aldeas. En el período Preclásico (c. 2000 a. C. hasta 250 d. C.) se desarrollaron las primeras sociedades complejas y se cultivaron los alimentos básicos de la dieta maya: el maíz, el frijol, la calabaza y el chile. Las primeras ciudades mayas se desarrollaron en torno a 750 a. C. Alrededor de 500 a. C. estas ciudades poseían una arquitectura monumental, incluyendo grandes templos con fachadas de estuco. La escritura glífica se utilizó desde el siglo iii a. C. En el preclásico tardío se desarrollaron grandes ciudades en la Cuenca del Petén, y Kaminaljuyú alcanzó prominencia en el altiplano guatemalteco. Desde alrededor de 250 d. C., el período clásico se define en gran medida por el levantamiento de monumentos esculpidos empleando las fechas de Cuenta Larga. En este período se desarrolló un gran número de ciudades-Estado vinculadas entre sí por una compleja red de comercio. En las tierras bajas mayas surgieron dos grandes poderes rivales, Tikal y Calakmul. Se vio también la intervención extranjera en la política dinástica maya de la ciudad de Teotihuacan del centro de México. En el siglo ix, se produjo un colapso político general en la región central maya, que originó guerras internas, el abandono de las ciudades, y un desplazamiento poblacional hacia el norte. Durante el período Posclásico surgió Chichén Itzá en el norte, y se produjo la expansión del reino quiché en el altiplano de Guatemala. En el siglo xvi el Imperio español conquistó la región mesoamericana, y tras una larga serie de campañas militares la última ciudad maya cayó en 1697.</p>
+    <p>El poder político durante el periodo clásico se centró en el concepto del «rey divino», que actuaba como mediador entre los mortales y el ámbito sobrenatural. La monarquía era usualmente hereditaria y patrilineal, y el poder pasaba al hijo mayor, aunque en más de un caso mujeres ostentaron el poder como regentes de sus hijos menores de edad o por derecho propio. La política maya estaba dominada por un sistema de patrocinio, aunque la exacta composición política de un reino variaba de una ciudad-Estado a otra. Generalmente cada aldea tenía un líder tribal, que respondía a un señor regional (Ajaw) supereditado por un señor divino (Kuhul Ajaw) y en algunos casos como el de Tikal, había un gobernante superior (rey de reyes) denominado Kalomté. Hacia el Clásico Tardío, la aristocracia había aumentado considerablemente y se había reducido el poder exclusivo del rey divino.</p>
+    <p>La civilización maya desarrolló formas de arte sofisticadas utilizando tanto materiales perecederos como durables, incluyendo madera, jade, obsidiana, cerámica, monumentos de piedra tallada, estucos y murales finamente pintados.</p>
+    <p>En las ciudades mayas el centro de la ciudad era ocupado por complejos ceremoniales y administrativos, rodeado por una irregular expansión de barrios residenciales. A menudo las diferentes partes de una ciudad eran conectadas por calzadas. La arquitectura principal de la ciudad se componía de palacios, templos piramidales, juegos de pelota ceremoniales, y estructuras alineadas para la observación astronómica. La élite maya sabía leer y escribir, y desarrolló un complejo sistema de escritura glífica, una de las más avanzadas en América precolombina. Los mayas grabaron su historia y conocimiento ritual en libros en forma de biombo, de los que solo permanecieron tres ejemplares con incuestionable autenticidad, el resto fue destruido por los conquistadores españoles. También existe un gran número de ejemplos de inscripciones mayas en las estelas y la cerámica. Los mayas desarrollaron una compleja serie de calendarios rituales entrelazados, emplearon la matemática y fueron uno de los primeros pueblos en utilizar el cero explícito en el mundo. Los mayas practicaban el sacrificio humano como parte de su religión.</p>
+</div>
+
+
+
+
+
+
+
+<!-- Javascript -->
+    <script src="/js/jquery1.7.2.js"></script>
+    <script src="/js/jquery.event.frame.js"></script>
+    <script src="/js/jquery.parallax.js"></script>
+    <script>
+        jQuery(document).ready (function(){
+            jQuery('#parallax .parallax-layer')
+            .parallax({
+                mouseport:jQuery('#parallax')
+            });
+        });
+    </script>
+</body>
+</html>
