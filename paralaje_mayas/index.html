@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imágenes con paralaje</title>
     <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="./css/estilos.css">
-    <link rel="stylesheet" href="./css/jparallax.css">
-   <!-- Pantala donde se verá la animación  -->
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/jparallax.css">
+   <!-- Pantalla donde se verá la animación  -->
    <style>
         .parallax-viewport{
             width: 800px;
@@ -25,13 +25,13 @@
 <!-- inicia ventana de paralaje  -->
     <div class="parallax-viewport" id="parallax">
 <!-- Capas de paralaje del fondoo hacia el frente -->
-        <div class="parallax-layer" alt="fondo" style=" width: 2256px; height: 461px;">
+        <div class="parallax-layer" alt="fondo" style=" width: 2256px; height: 461px;"> 
             <img src="imagen/cielo.jpg" style="position: absolute; left: 0px; top: 0px;">
         </div>
-        <div class="parallax-layer" alt="capa media" style="width: 1274px; height: 296px;">
+        <div class="parallax-layer" alt="capa media" style="width: 1274px; height: 296px;"> <!-- las alturas deben ser mas chica que el viewport  -->
             <img src="imagen/chichen.png">
         </div>
-        <div class="parallax-layer" alt="capa frontal" style="width: 1920px; height: 257px;">
+        <div class="parallax-layer" alt="capa frontal" style="width: 1920px; height: 257px;"> <!-- las alturas deben ser mas chica que el viewport  -->
             <img src="imagen/pasto_final.png" style="position: absolute; top: 43px; left: -350px;">
         </div>
     </div>
@@ -52,9 +52,9 @@
 
 
 <!-- Javascript -->
-    <script src="./js/jquery1.7.2.js"></script>
-    <script src="./js/jquery.event.frame.js"></script>
-    <script src="./js/jquery.parallax.js"></script>
+    <script src="js/jquery1.7.2.js"></script>
+    <script src="js/jquery.event.frame.js"></script>
+    <script src="js/jquery.parallax.js"></script>
     <script>
         jQuery(document).ready (function(){
             jQuery('#parallax .parallax-layer')
