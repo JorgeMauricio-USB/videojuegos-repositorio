@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen final</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/jparallax.css">
+    <script src="js/phaser.min.js"></script>
+
+   <!-- Pantalla donde se verá la animación  -->
+   <style>
+        .parallax-viewport{
+            width: 800px;
+            max-width: 60em;
+            height: 296px;
+            background-color: #aebcc9;
+        }
+    </style>
+       <!-- Pantala donde se verá la animación  -->
+</head>
+<body>
+    <div style= "width:800px; margin: auto;">       <!-- Para centrar el rectangulo  -->
+    <h1>¡Vámonos de excursión al bosque!</h1>
+<!-- inicia ventana de paralaje  -->
+    <div class="parallax-viewport" id="parallax">
+    <!-- Capas de paralaje del fondo hacia el frente -->
+        <div class="parallax-layer" alt="fondo" style=" width: 2256px; height: 461px;"> 
+            <img src="images/paralaje_cielo.jpg" style="position: absolute; left: 0px; top: 0px;">
+        </div>
+        <div class="parallax-layer" alt="capa media" style="width: 1274px; height: 296px;"> <!-- las alturas deben ser mas chica que el viewport  -->
+            <img src="images/paralaje_medio.png">
+        </div>
+        <div class="parallax-layer" alt="capa frontal" style="width: 1920px; height: 257px;"> <!-- las alturas deben ser mas chica que el viewport  -->
+            <img src="images/paralaje_frente.png" style="position: absolute; top: 43px; left: -350px;">
+        </div>
+    </div>
+    </div>
+    <!-- termina ventana de paralaje  -->
+<!-- Contenido -->
+<h1 class= "centrar texto">¡Juega en el bosque!</h1>
+<h2 class= "centrar texto">Antes de nuestro paseo, estacionemos el auto, porque de ahí nos iremos caminando al bosque (presiona las flechas para mover el auto)</h2>
+<input class="boton boton-principal centrar-texto" type="button" style="height:100px;width:200px" value="Parking" onclick="auto()">
+<h2 class= "centrar texto">¡Ahora sí a comenzar a explorar el bosque! (presiona las teclas A, D, J, L para moverte)</h2>
+<input class="boton boton-principal centrar-texto" type="button" style="height:100px;width:200px" value="Bosque" onclick="bosque_dia()">
+<h2 class= "centrar texto">¡Sigamos explorando el bosque! (presiona las teclas A, W, S, D para moverte)</h2>
+<input class="boton boton-principal centrar-texto" type="button" style="height:100px;width:200px" value="Explora" onclick="aerea()">
+<h2 class= "centrar texto">¡Se nos hace de noche, regresemos al carro y de ahí de vuelta a casa! (presiona las teclas A, S, D para moverte)</h2>
+<input class="boton boton-principal centrar-texto" type="button" style="height:100px;width:200px" value="De noche" onclick="seamless()">
+
+
+
+<script src="js/videojuegos_final.js"></script>
+
+
+
+
+<!-- Javascript -->
+
+    <script src="js/jquery1.7.2.js"></script>
+    <script src="js/jquery.event.frame.js"></script>
+    <script src="js/jquery.parallax.js"></script>
+    <script>
+        jQuery(document).ready (function(){
+            jQuery('#parallax .parallax-layer')
+            .parallax({
+                mouseport:jQuery('#parallax')
+            });
+        });
+    </script>
+
+</body>
+</html>
