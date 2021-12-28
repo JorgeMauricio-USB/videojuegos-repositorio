@@ -1,15 +1,20 @@
 var game = new Phaser.Game(600, 600, Phaser.CANVAS, 'Auto', {preload: preload, create: create, update: update});
 
 function preload(){
-    game.load.image('auto', 'images/carro.png');
-    game.load.image('fondo', "images/estacionamiento.jpeg");
+        game.load.image('auto', 'images/carro.png');
+        // precargar sonidos 
+        game.load.audio('inicio', ['audiofx/auto_llantas_chirriando.ogg', 'audiofx/auto_llantas_chirriando.mp3'])
+        game.load.audio('arranque', ['audiofx/auto_carreras1.ogg', 'audiofx/auto_carreras1.mp3'])
+  
+        game.load.image('fondo', "images/estacionamiento.jpeg");
 };
 
 // Agregar fisicas, agrega peso al objeto para que vaya con la gravedad y detecte inercia, coliciones,etc.
 function create(){
-    game.physics.startSystem(Phaser.physics,'ARCADE')
-    game.add.sprite('fondo');
+    game.add.sprite(0,0,'fondo');
     game.stage.backgroundColor = '#4488AA';
+
+    game.physics.startSystem(Phaser.physics,'ARCADE')
     
     sprite = game.add.sprite(450, 80, 'auto');
     sprite.anchor.setTo(0.5, 0.5); //cambia el punto de ancla del objeto, en este caso el carro para que gire desde el centro
@@ -18,6 +23,14 @@ function create(){
     sprite.body.collideWorldBounds = true; //evita que se salga del escenario
 
     cursors = game.input.keyboard.createCursorKeys(); //agregar las teclas en este caso son las flechas del teclado
+
+
+    inicio = game.add.audio("inicio");
+    inicio.volume = 0,01;
+
+    arranque = game.add.audio("arranque");
+    inicio.volume = 0,01;
+
 }
 
 function update(){
