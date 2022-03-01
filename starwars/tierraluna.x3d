@@ -1,0 +1,45 @@
+<x3d class="fondo">
+    <Scene>
+    <!-- Rotacion en el eje de las Y -->
+
+    <!-- Agrupa a la luna y a la tierra en una sola -->
+    <transform DEF="RotacionY"> 
+    <!-- Tierra -->
+            <Shape>
+                <Appearance>
+                    <imageTexture url="texturas/ctierra.jpg"/>
+                </Appearance>
+                <Sphere/>
+            </Shape>  
+
+    <!-- Luna -->
+        <Transform translation="2 0 0" scale="0.4 0.4 0.4">
+            <Shape>
+                <Appearance>
+                    <imageTexture url="texturas/cluna.jpg"/>
+                </Appearance>
+                <Sphere/>
+            </Shape>  
+        </Transform>
+
+
+
+
+
+        
+    <!-- Parámetros de animación: sensor de tiempo y cuál eje se animará -->
+			<timeSensor DEF='timerTL' cycleInterval='10' loop='true'></timeSensor>
+			<orientationInterpolator DEF='rotatorTL' key='
+            0 
+            0.5 
+            1' keyValue='
+            0 1 0 0 
+            0 1 0 3.14 
+            0 1 0 6.28'>
+			</orientationInterpolator>
+    </transform>    
+    <!-- ROUTE canaliza el sensor de tiempo y la rotación al transform -->
+			<ROUTE fromNode='timerTL' fromField='fraction_changed' toNode='rotatorTL' toField='set_fraction'></ROUTE>
+			<ROUTE fromNode='rotatorTL' fromField='value_changed' toNode='RotacionY' toField='set_rotation'></ROUTE>
+    </Scene>
+</x3d>
