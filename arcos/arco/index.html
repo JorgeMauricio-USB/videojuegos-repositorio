@@ -22,31 +22,128 @@
 <body>
   <X3D class="fondo">
 <Scene>
- <Transform DEF='plantaBaja'>
-    <Transform DEF='Fila'>
-    <inline DEF="Arco" url="arco.x3d"></inline>
-    </Transform>
-    
-     <Transform translation="3.5 0 0">
-      <shape USE="Fila"/>
-    </Transform>
+   
+<Transform DEF="plantabaja">  <!-- abre planta baja -->
+      <Transform DEF='Fila'> <!-- abre Fila 1-->
+          <Transform DEF='arco'>
+          <inline DEF="Arco" url="arco.x3d"></inline>
+          </Transform>
+          
+          <!-- Copias de arco original -->
 
-    <Transform translation="7 0 0">
-      <shape USE="Fila"/>
-    </Transform>
+          <Transform translation="3.5 0 0">
+            <shape USE="arco"/>
+          </Transform>
 
-    <Transform translation="10.5 0 0">
-      <shape USE="Fila"/>
-    </Transform>
+          <Transform translation="7 0 0">
+            <shape USE="arco"/>
+          </Transform>
 
-    <Transform translation="14 0 0">
-      <shape USE="Fila"/>
-    </Transform>
+          <Transform translation="10.5 0 0">
+            <shape USE="arco"/>
+          </Transform>
 
-    <Transform translation="17.5 0 0">
-      <shape USE="Fila"/>
-    </Transform>
+          <Transform translation="14 0 0">
+            <shape USE="arco"/>
+          </Transform>
+
+          <Transform translation="17.5 0 0">
+            <shape USE="arco"/>
+          </Transform>  
+      </Transform> <!-- cierre de Fila  1-->
+
+
+      <Transform translation="0 0 14"> <!-- Fila de enfrente -->
+        <Transform USE="Fila"> </Transform>
+        </Transform>
+
+      <Transform rotation="0 1 0 -1.57" translation="2 0 -2"> <!-- Fila perpendicular 1-->
+      <Transform USE="Fila"> </Transform>
+      </Transform>
+
+      <Transform rotation="0 1 0 -1.57" translation="16 0 -2"> <!-- Fila perpendicular 2-->
+        <Transform USE="Fila"> </Transform>
+        </Transform>
+
+</Transform> <!-- cierra planta baja -->
+
+
+<!-- Primer Piso -->
+<Transform translation="0 4 0">
+  <Transform USE="plantabaja"></Transform>
 </Transform>
+
+
+
+<!-- Suelo-->
+
+<Transform rotation="1 0 0 -1.57" translation="9 -2.5 7"> 
+  <Shape>
+    <Appearance>
+      <ImageTexture url="images/piso.jpg"></ImageTexture>
+      <TextureTransform scale="10 10 "></TextureTransform>
+    </Appearance>
+    <Box size="30 30 0.5"></Box>
+  </Shape>
+</Transform> 
+
+<!--Inicia Piso y cielo-->
+
+<Background 
+      skyColor="0.21 0.18 0.66,
+                0.2 0.44 0.85,
+                0.51 0.81 0.95,
+                0.77 0.80 0.82"
+      skyAngle="0.5 1.5 1.57"
+      
+      groundColor="0.6 0.7 0.1,
+                   0.4 0.7 0.2,
+                   0.1 0.6 0.1,
+                   0 0.3 0.1"
+      groundAngle="0.9 1.5 1.57">
+      </Background>
+<!--termina Piso y cielo-->
+
+<!-- Pared 1-->
+
+<Transform translation="8 2.5 17.5"> 
+  <Shape>
+    <Appearance>
+      <ImageTexture url="images/pared.jpeg"></ImageTexture>
+      <TextureTransform scale="10 10 "></TextureTransform>
+    </Appearance>
+    <Box size="23 10 0.2"></Box>
+  </Shape>
+</Transform>
+
+
+<!-- Pared 2-->
+
+<Transform translation="8 2.5 -4"> 
+  <Shape>
+    <Appearance>
+      <ImageTexture url="images/pared.jpeg"></ImageTexture>
+      <TextureTransform scale="10 10 "></TextureTransform>
+    </Appearance>
+    <Box size="23 10 0.2"></Box>
+  </Shape>
+</Transform>
+
+<!-- Pared 3 (lado opuesto a puerta principal)-->
+
+<Transform rotation="0 1 0 -1.57" translation="19.5 2.5 6.8"> 
+  <Shape>
+    <Appearance>
+      <ImageTexture url="images/pared.jpeg"></ImageTexture>
+      <TextureTransform scale="10 10 "></TextureTransform>
+    </Appearance>
+    <Box size="21.5 10 0.2"></Box>
+  </Shape>
+</Transform>
+
+<!-- Fachada -->
+
+
 
 </Scene>
   </X3D>  
