@@ -73,11 +73,7 @@
   <Transform USE="plantabaja"></Transform>
 </Transform>
 
-<!-- segundo Piso -->
-<Transform translation="0 8 0">
-    <Transform USE="plantabaja"></Transform>
-  </Transform>
-  
+
 
 <!-- Suelo-->
 
@@ -90,58 +86,6 @@
     <Box size="30 30 0.5"></Box>
   </Shape>
 </Transform> 
-
-<!-- Pared 1-->
-
-<Transform translation="8 5 17.5"> 
-    <Shape>
-      <Appearance>
-        <ImageTexture url="img/Fachada2.jpg"></ImageTexture>
-        <TextureTransform scale="5 3 "></TextureTransform>
-      </Appearance>
-      <Box size="23 15 0.2"></Box>
-    </Shape>
-  </Transform>
-  
-<!-- Pared 2-->
-
-<Transform translation="8 5 -4"> 
-    <Shape>
-      <Appearance>
-        <ImageTexture url="img/FACHADA2.jpg"></ImageTexture>
-        <TextureTransform scale="5 3 "></TextureTransform>
-      </Appearance>
-      <Box size="23 15 0.2"></Box>
-    </Shape>
-  </Transform>
-
-
-<!-- Pared 3 (lado opuesto a puerta principal)-->
-
-<Transform rotation="0 1 0 -1.57" translation="19.5 5 6.8"> 
-    <Shape>
-      <Appearance>
-        <ImageTexture url="img/ladrillos.jpg"></ImageTexture>
-        <TextureTransform scale="25 25 "></TextureTransform>
-      </Appearance>
-      <Box size="21.5 15 0.2"></Box>
-    </Shape>
-  </Transform>
-  
-
-<!-- entrada principal -->
-
-<Transform rotation="0 1 0 -1.57" translation="-3.5 5 6.8"> 
-    <Shape>
-      <Appearance>
-        <ImageTexture url="img/ladrillos.jpg"></ImageTexture>
-        <TextureTransform scale="25 25 "></TextureTransform>
-      </Appearance>
-      <Box size="21.5 15 0.2"></Box>
-    </Shape>
-  </Transform>
-
-
 
 <!--Inicia Piso y cielo-->
 
@@ -159,3 +103,49 @@
       groundAngle="0.9 1.5 1.57">
       </Background>
 <!--termina Piso y cielo-->
+
+<!-- Pared 1-->
+
+<Transform translation="8 2.5 17.5"> 
+  <Shape>
+    <Appearance>
+      <ImageTexture url="images/pared.jpeg"></ImageTexture>
+      <TextureTransform scale="10 10 "></TextureTransform>
+    </Appearance>
+    <Box size="23 10 0.2"></Box>
+  </Shape>
+</Transform>
+
+
+<!-- Pared 2-->
+
+<Transform translation="8 2.5 -4"> 
+  <Shape>
+    <Appearance>
+      <ImageTexture url="images/pared.jpeg"></ImageTexture>
+      <TextureTransform scale="10 10 "></TextureTransform>
+    </Appearance>
+    <Box size="23 10 0.2"></Box>
+  </Shape>
+</Transform>
+
+<!-- Pared 3 (lado opuesto a puerta principal)-->
+
+<Transform rotation="0 1 0 -1.57" translation="19.5 2.5 6.8"> 
+  <Shape>
+    <Appearance>
+      <ImageTexture url="images/pared.jpeg"></ImageTexture>
+      <TextureTransform scale="10 10 "></TextureTransform>
+    </Appearance>
+    <Box size="21.5 10 0.2"></Box>
+  </Shape>
+</Transform>
+
+<!-- Fachada -->
+
+
+
+</Scene>
+  </X3D>  
+</body>
+</html>
