@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sol</title>
+    <script type='text/javascript' src='https://www.x3dom.org/download/x3dom.js'> </script> 
+    <link rel='stylesheet' type='text/css' href='https://www.x3dom.org/download/x3dom.css'>
+    <style>
+        body{
+            background: #000 url("texturas/espacio.jpg");
+            color: white;
+            font-family: sans-serif;
+        }
+        .fondo{
+            width: 90vw;
+            height: 100vh;
+            margin: auto; 
+        }
+        h1{
+            text-align:center;
+        }
+    </style>
+    </head>
+    <body>
+        <h1>Átomo con X3D</h1>
+<x3d class="fondo">
+    <Scene>
+    <!-- Animación de rotación para el sistema solar -->
+        <Transform DEF="NAtomo">
+            <!-- centro negro -->
+            <Shape>
+                <Appearance>
+                    <Material diffuseColor='0 0 0'/>
+                </Appearance>
+                <Sphere></Sphere>
+            </Shape>
+             <!-- neutron 1  -->
+             <transform translation="0.5 0 0" scale="1.2 1.2 1.2">
+                <inline url="neutron.x3d"></inline>
+            </transform>
+              <!-- neutron 2  -->
+              <transform translation="-1 1 -1" scale="1.2 1.2 1.2">
+                <inline url="neutron.x3d"></inline>
+            </transform>
+            <!-- neutron 3  -->
+            <transform translation="-1 -1 1" scale="1.2 1.2 1.2">
+                <inline url="neutron.x3d"></inline>
+            </transform>
+             <!-- neutron 4  -->
+             <transform translation="-0.001 0.0001 0.5" scale="1.2 1.2 1.2">
+                <inline url="neutron.x3d"></inline>
+            </transform>
+        
+       
+            <!-- proton 1  -->
+            <transform translation="1 -1 1" scale="1.2 1.2 1.2">
+                <inline url="proton.x3d"></inline>
+            </transform>
+             <!-- proton 2  -->
+             <transform translation="0.5 1 1" scale="1.2 1.2 1.2">
+                <inline url="proton.x3d"></inline>
+            </transform>
+              <!-- proton 3  -->
+              <transform translation="-1 -1 -1" scale="1.2 1.2 1.2">
+                <inline url="proton.x3d"></inline>
+            </transform>
+             <!-- proton 4  -->
+             <transform translation="1 1 -1" scale="1.2 1.2 1.2">
+                <inline url="proton.x3d"></inline>
+            </transform>
+             <!-- proton 4  -->
+             <transform translation="1 1 -1" scale="1.2 1.2 1.2">
+                <inline url="proton.x3d"></inline>
+            </transform>
+        
+
+            <!-- electron 1 -->
+            <transform translation="2.5 2.5 2.5" scale="1 1 1">
+                <inline url="electron.x3d"></inline>
+            </transform>
+
+            <!-- electron 2 -->
+            <transform translation="4 -4 -4.3" scale="1 1 1">
+                <inline url="electron.x3d"></inline>
+            </transform>
+
+             <!-- electron 3 -->
+             <transform translation="-5 5.8 -5" scale="1 1 1">
+                <inline url="electron.x3d"></inline>
+            </transform>
+            
+             <!-- electron 4 -->
+             <transform translation="-6.3 -1 -6" scale="1 1 1">
+                <inline url="electron.x3d"></inline>
+            </transform>
+
+            <!-- electron 4 -->
+            <transform translation="2 7.7 -7.7" scale="1 1 1">
+                <inline url="electron.x3d"></inline>
+            </transform>
+
+            <!-- electron 5 -->
+            <transform translation="8 -8 8" scale="1 1 1">
+                <inline url="electron.x3d"></inline>
+            </transform>
+
+       
+        </transform>
+        <!-- Parámetros de animación: sensor de tiempo y cuál eje se animará -->
+           <timeSensor DEF='timerTL' cycleInterval='5' loop='true'></timeSensor>
+           <orientationInterpolator DEF='rotatorTL' key='
+           0 
+           0.5 
+           1' keyValue='
+           0 1 0 0 
+           1 1 0 3.14 
+           0 1 0 6.28'>
+           </orientationInterpolator>
+   </Transform> <!-- Cierre SSolar -->
+   <!-- ROUTE canaliza el sensor de tiempo y la rotación al transform -->
+           <ROUTE fromNode='timerTL' fromField='fraction_changed' toNode='rotatorTL' toField='set_fraction'></ROUTE>
+           <ROUTE fromNode='rotatorTL' fromField='value_changed' toNode='NAtomo' toField='set_rotation'></ROUTE>
+
+   </Scene>
+</x3d>
+</body>
+</html>

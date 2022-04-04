@@ -1,0 +1,19 @@
+<x3d class="fondo">
+    <Scene>
+        <Shape>
+            <Appearance>
+                <!-- <Material diffuseColor='1 1 0'/> -->
+                <imageTexture url="texturas/csaturno.jpg"/>
+            </Appearance>
+            <Sphere>
+            </Sphere>
+        </Shape>
+            <Shape>
+                <Appearance>
+                    <imageTexture url="texturas/anillos.png"/>
+                </Appearance>
+                <Cylinder radius="2" height="0.01"/>
+            
+            </Shape>
+    </Scene>
+</x3d>
