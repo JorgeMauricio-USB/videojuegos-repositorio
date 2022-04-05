@@ -1,0 +1,78 @@
+/*-----------------------------
+1. TIPOGRAFIA
+-------------------------------*/
+html {
+    font-size: 62.5%;
+    /* Normalizar para REMS */
+  }
+  
+  body {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.6rem;
+    color: black;
+    background-color: black;
+  }
+
+  
+  /* Principales */
+  h1 {
+    font-size: 17rem;
+  }
+  
+  h2 {
+    font-size: 12rem;
+  }
+  
+  h3 {
+    font-size: 3rem;
+  }
+  
+  h4 {
+    font-size: 2.6rem;
+  }
+  
+  .bg-primary {
+    background-color: #419A1C !important;
+  }
+  
+
+  
+  .bg-secondary {
+    background-color: #384452 !important;
+  }
+  
+  .text-primary {
+    color: #387bf8 !important;
+  }
+  
+  
+  .text-success {
+    color: #BBFF9C !important;
+  }
+  
+  .razones {
+    border: none;
+  }
+  
+ 
+  .navbar-nav li a {
+    color: #32abe4 !important;
+    padding-right: 3rem !important;
+    font-size: 9rem;
+  }
+  
+  .fondo-header {
+    background-image: url(../images/principal01.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 35rem;
+  }
+  
+
+  
+  .card-body i {
+    text-shadow: -.2rem -.4rem .1rem black;
+  }
+ 
+
+  /*# sourceMappingURL=estilos.css.map */
