@@ -1,0 +1,11 @@
+<x3d class="fondo">
+    <Scene>
+            <Shape>
+                <Appearance>
+                    <imageTexture url="texturas/galaxia3.png"/>
+                </Appearance>
+                <Cylinder radius="2" height="0.01"/>
+            
+            </Shape>
+    </Scene>
+</x3d>
