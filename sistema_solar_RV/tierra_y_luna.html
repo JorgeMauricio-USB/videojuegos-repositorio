@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realidad Aumentada con AR.js</title>
+
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+</head>
+<body>
+    <a-scene embedded arjs>
+<!--         <a-marker preset="hiro">
+            <a-entity geometry="primitive:box; width: 1; height: 1; depth: 1" material="color: tomato; opacity: 0.8">
+            </a-entity>
+        </a-marker> -->
+
+      <!--   <a-marker preset="hiro">
+            <a-entity geometry="primitive: sphere; radius: 1" material="color: green; opacity: 0.8">
+            </a-entity>
+        </a-marker> -->
+      <!--   <a-marker preset="hiro">
+            <a-entity geometry="primitive: torusKnot; radius: 1; radius-tubular: 0.1" material="color: green; opacity: 0.8">
+            </a-entity>
+        </a-marker>
+ -->
+
+<!--         <a-marker preset="hiro">
+            <a-entity geometry="primitive: cylinder; radius: 1 height: 3" material="color: green; opacity: 0.8">
+            </a-entity>
+        </a-marker>
+ -->
+
+<!-- Tierra y luna -->
+        <a-marker preset="hiro">
+            <!-- Tierra -->
+            <a-entity geometry="primitive: sphere; radius: 1" material="src: url(texturas/tierra.jpg)" rotation="-45 0 0" position="0 1 0">
+            </a-entity>
+            <!-- Luna -->
+            <a-entity geometry="primitive: sphere; radius: 0.3" material="src: url(texturas/cluna.jpg)" rotation="-30 0 0" position="4 1 -1">
+            </a-entity>
+        </a-marker>
+
+
+
+    <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>
